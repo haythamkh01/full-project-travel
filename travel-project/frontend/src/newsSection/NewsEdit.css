@@ -1,0 +1,212 @@
+/* News Editor Styles */
+.news-edit {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.news-edit h2 {
+    color: #2c3e50;
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #ecf0f1;
+    font-weight: 700;
+}
+
+/* Form Elements */
+.news-edit label {
+    display: block;
+    margin: 20px 0 8px 0;
+    color: #2c3e50;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.news-edit input[type="text"],
+.news-edit textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #e6e9ed;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.news-edit input[type="text"]:focus,
+.news-edit textarea:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+    background-color: #fff;
+}
+
+.news-edit textarea {
+    min-height: 200px;
+    resize: vertical;
+    line-height: 1.6;
+}
+
+/* File Input Styling */
+.news-edit input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px dashed #e6e9ed;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.news-edit input[type="file"]:hover {
+    border-color: #3498db;
+    background-color: #e8f4fd;
+}
+
+.news-edit input[type="file"]::file-selector-button {
+    padding: 10px 15px;
+    margin-right: 15px;
+    border: none;
+    border-radius: 6px;
+    background: #3498db;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.news-edit input[type="file"]::file-selector-button:hover {
+    background: #2980b9;
+}
+
+/* Button Styles */
+.news-edit button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.news-edit button:first-of-type {
+    background: linear-gradient(to right, #3498db, #2980b9);
+    color: white;
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+}
+
+.news-edit button:first-of-type:hover {
+    background: linear-gradient(to right, #2980b9, #2573a7);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+}
+
+.news-edit button:last-of-type {
+    background: #f8f9fa;
+    color: #6c757d;
+    border: 1px solid #e6e9ed;
+    margin-left: 12px;
+}
+
+.news-edit button:last-of-type:hover {
+    background: #e9ecef;
+    color: #495057;
+    transform: translateY(-2px);
+}
+
+/* Image Preview */
+.image-preview {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.image-preview img {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 15px;
+}
+
+/* Character Count */
+.char-count {
+    text-align: right;
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+.char-count.warning {
+    color: #f39c12;
+}
+
+.char-count.error {
+    color: #e74c3c;
+    font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .news-edit {
+        margin: 20px;
+        padding: 25px 20px;
+    }
+
+    .news-edit h2 {
+        font-size: 1.8rem;
+    }
+
+    .news-edit button {
+        width: 100%;
+        margin: 8px 0 !important;
+    }
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.news-edit {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Loading State */
+.news-edit.saving button:first-of-type {
+    position: relative;
+    color: transparent;
+}
+
+.news-edit.saving button:first-of-type::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    margin: -10px 0 0 -10px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}

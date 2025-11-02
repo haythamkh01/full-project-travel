@@ -1,0 +1,417 @@
+
+
+.create-trip {
+
+    width: 100%;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    margin: 20px;
+
+}
+
+.trip-title {
+    font-size: 2.5rem;
+    color: #2d3748;
+    margin-bottom: 15px;
+    text-align: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.trip-subtitle {
+    font-size: 1.2rem;
+    color: #718096;
+    text-align: center;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.field {
+    margin-bottom: 40px;
+}
+
+.field-title {
+    font-size: 1.5rem;
+    color: #4a5568;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e9ecef;
+}
+
+/* Input field styling */
+.input {
+    width: 100%;
+    padding: 16px 20px;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    color: #2d3748;
+}
+
+.input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* Options grid styling */
+.options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.option-card {
+    background: #f8f9fa;
+    border-radius: 16px;
+    padding: 25px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.option-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    background: white;
+}
+
+.option-card.selected {
+    border-color: #667eea;
+    background: #f0f4ff;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+}
+
+.icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #667eea;
+}
+
+.option-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 8px;
+}
+
+.option-desc {
+    color: #718096;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Button styling */
+.primary {
+    width: 100%;
+    padding: 18px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+}
+
+.primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(102, 126, 234, 0.4);
+}
+
+.primary:active {
+    transform: translateY(0);
+}
+
+.primary:disabled {
+    background: #cbd5e0;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Custom select styling (for Google Places Autocomplete) */
+.google-places-container {
+    margin-top: 10px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .create-trip {
+        padding: 30px 20px;
+    }
+
+    .trip-title {
+        font-size: 2rem;
+    }
+
+    .trip-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .field-title {
+        font-size: 1.3rem;
+    }
+
+    .options-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Animation for form elements */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.field {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.field:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.field:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.field:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.field:nth-child(5) {
+    animation-delay: 0.4s;
+}
+/* Hotels Section */
+.hotels-section {
+    margin-top: 32px;
+    padding: 24px;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    background: linear-gradient(to bottom, #ffffff, #fafafa);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.hotels-section:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+}
+
+.hotels-section h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #1f2937;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #f3f4f6;
+}
+
+.hotels-section h3:before {
+    content: "🏨";
+    margin-right: 10px;
+    font-size: 1.3rem;
+}
+
+.hotels-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* Hotel Card */
+.hotel-card {
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 20px;
+    background: white;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.hotel-card:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(to right, #3b82f6, #8b5cf6);
+    border-radius: 4px 4px 0 0;
+}
+
+.hotel-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border-color: #d1d5db;
+}
+
+.hotel-name {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #1f2937;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.hotel-details {
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.hotel-details span {
+    display: inline-flex;
+    align-items: center;
+}
+
+.hotel-details span:not(:last-child):after {
+    content: "•";
+    margin-left: 8px;
+    color: #d1d5db;
+}
+
+.hotel-why {
+    margin-top: 12px;
+    font-size: 0.9rem;
+    color: #4b5563;
+    line-height: 1.5;
+    padding: 12px;
+    background-color: #f9fafb;
+    border-radius: 8px;
+    border-left: 3px solid #3b82f6;
+}
+
+/* Hotel Actions */
+.hotel-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.hotel-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    flex: 1;
+    border: none;
+    cursor: pointer;
+    gap: 6px;
+}
+
+.hotel-btn.maps {
+    background: linear-gradient(to right, #3b82f6, #2563eb);
+    color: white;
+    box-shadow: 0 2px 6px rgba(37, 99, 235, 0.25);
+}
+
+.hotel-btn.maps:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.35);
+}
+
+.hotel-btn.booking {
+    background: linear-gradient(to right, #10b981, #059669);
+    color: white;
+    box-shadow: 0 2px 6px rgba(16, 185, 129, 0.25);
+}
+
+.hotel-btn.booking:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(16, 185, 129, 0.35);
+}
+
+/* Price Band Indicators */
+.hotel-card[data-price="budget"]:before {
+    background: linear-gradient(to right, #10b981, #059669);
+}
+
+.hotel-card[data-price="mid-range"]:before {
+    background: linear-gradient(to right, #3b82f6, #2563eb);
+}
+
+.hotel-card[data-price="luxury"]:before {
+    background: linear-gradient(to right, #8b5cf6, #7c3aed);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hotels-section {
+        padding: 20px 16px;
+        margin-top: 24px;
+    }
+
+    .hotels-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .hotel-actions {
+        flex-direction: column;
+    }
+
+    .hotel-btn {
+        width: 100%;
+    }
+}
+
+/* Animation for hotel cards */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hotel-card {
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.hotel-card:nth-child(1) { animation-delay: 0.1s; }
+.hotel-card:nth-child(2) { animation-delay: 0.2s; }
+.hotel-card:nth-child(3) { animation-delay: 0.3s; }
+.hotel-card:nth-child(4) { animation-delay: 0.4s; }
+.hotel-card:nth-child(5) { animation-delay: 0.5s; }
+
+/* Smooth transitions */
+.hotel-card, .hotel-btn {
+    transition: all 0.3s ease;
+}

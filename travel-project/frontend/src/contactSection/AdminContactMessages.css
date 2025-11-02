@@ -1,0 +1,22 @@
+.adm-msgs { padding: 16px; }
+.adm-msgs__header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.adm-msgs__controls { display: flex; gap: 12px; align-items: center; }
+.adm-msgs__badge { background: #eef; border: 1px solid #99c; border-radius: 999px; padding: 4px 10px; font-weight: 600; }
+
+.adm-msgs__alert { margin: 10px 0; padding: 10px; border: 1px solid #d88; background: #fee; border-radius: 6px; }
+.adm-msgs__loading { margin: 10px 0; }
+
+.adm-msgs__tablewrap { overflow: auto; border: 1px solid #ddd; border-radius: 8px; }
+.adm-msgs__table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.adm-msgs__table th, .adm-msgs__table td { padding: 8px 10px; border-bottom: 1px solid #eee; vertical-align: top; }
+.adm-msgs__table thead th { background: #f8f8f8; position: sticky; top: 0; }
+.adm-msgs__table tr.is-new { background: #f9ffef; }
+.adm-msgs__table td.mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+
+.actions button { padding: 6px 10px; border: 1px solid #ccc; border-radius: 6px; cursor: pointer; }
+.actions button:hover { background: #f0f0f0; }
+.muted { color: #999; }
+
+.adm-msgs__pager { display: flex; gap: 12px; align-items: center; justify-content: center; margin-top: 12px; }
+.adm-msgs__pager button { padding: 6px 10px; border: 1px solid #ccc; border-radius: 6px; cursor: pointer; }
+.badge-unread { background: #d00; color: #fff; padding: 2px 6px; border-radius: 10px; font-size: 12px; margin-left: 6px; }

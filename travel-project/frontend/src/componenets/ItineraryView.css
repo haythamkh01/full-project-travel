@@ -1,0 +1,353 @@
+/* Itinerary Container */
+.itin-wrap {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #2d3748;
+    line-height: 1.6;
+}
+
+/* Seasonality Section */
+.seasonality {
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 32px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border-left: 4px solid #0ea5e9;
+}
+
+.seasonality h2 {
+    color: #0369a1;
+    margin-bottom: 12px;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.seasonality h2:before {
+    content: "🌤️";
+    margin-right: 10px;
+    font-size: 1.3rem;
+}
+
+.seasonality p {
+    color: #475569;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+/* Days Section */
+.days {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+/* Day Card */
+.day-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.day-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.day-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px 24px;
+    position: relative;
+}
+
+.day-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.day-header h3:before {
+    content: "📅";
+    margin-right: 10px;
+    font-size: 1.3rem;
+}
+
+/* Segments List */
+.segments {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.segment {
+    padding: 24px;
+    border-bottom: 1px solid #e2e8f0;
+    transition: background-color 0.2s ease;
+}
+
+.segment:last-child {
+    border-bottom: none;
+}
+
+.segment:hover {
+    background-color: #f8fafc;
+}
+
+/* Segment Header */
+.seg-head {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 16px;
+    gap: 12px;
+}
+
+/* Chip Styling */
+.chip {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    white-space: nowrap;
+    flex-shrink: 0;
+    margin-top: 4px;
+}
+
+.chip.morning {
+    background-color: #fffbeb;
+    color: #d97706;
+    border: 1px solid #fcd34d;
+}
+
+.chip.afternoon {
+    background-color: #f0fdf4;
+    color: #15803d;
+    border: 1px solid #86efac;
+}
+
+.chip.evening {
+    background-color: #fdf4ff;
+    color: #a21caf;
+    border: 1px solid #f0abfc;
+}
+
+.chip.night {
+    background-color: #1e293b;
+    color: #e2e8f0;
+    border: 1px solid #475569;
+}
+
+.chip.other {
+    background-color: #f1f5f9;
+    color: #475569;
+    border: 1px solid #cbd5e1;
+}
+
+/* Segment Title */
+.seg-title {
+    margin: 0;
+    font-size: 1.3rem;
+    color: #1e293b;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+/* Segment Summary */
+.seg-summary {
+    color: #475569;
+    margin-bottom: 20px;
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+/* Segment Actions */
+.seg-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+}
+
+/* Button Styles */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    font-size: 0.95rem;
+    border: none;
+    cursor: pointer;
+    gap: 6px;
+}
+
+.btn:not(.ghost) {
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    color: white;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+}
+
+.btn:not(.ghost):hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+}
+
+.btn.ghost {
+    background: transparent;
+    color: #3b82f6;
+    border: 1px solid #dbeafe;
+    position: relative;
+}
+
+.btn.ghost:hover {
+    background: #dbeafe;
+}
+
+/* Hours Popover */
+.hours-pop {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    background: white;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    width: 280px;
+    z-index: 10;
+    margin-bottom: 10px;
+    color: #475569;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    border: 1px solid #e2e8f0;
+}
+
+.hours-pop:after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 20px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+}
+
+/* Notes Section */
+.notes {
+    background: linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 100%);
+    border-radius: 16px;
+    padding: 24px;
+    margin-top: 40px;
+    border-left: 4px solid #0d9488;
+}
+
+.notes h3 {
+    color: #0f766e;
+    margin-bottom: 16px;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+}
+
+.notes h3:before {
+    content: "📝";
+    margin-right: 10px;
+    font-size: 1.3rem;
+}
+
+.notes ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.notes li {
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(5, 150, 105, 0.2);
+    position: relative;
+    padding-left: 24px;
+    color: #475569;
+}
+
+.notes li:last-child {
+    border-bottom: none;
+}
+
+.notes li:before {
+    content: "•";
+    color: #0d9488;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .itin-wrap {
+        padding: 16px;
+    }
+
+    .seg-head {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .seg-actions {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hours-pop {
+        width: 200px;
+        left: -60px;
+    }
+
+    .hours-pop:after {
+        left: 70px;
+    }
+}
+
+/* Animation for day cards */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.day-card {
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.day-card:nth-child(1) { animation-delay: 0.1s; }
+.day-card:nth-child(2) { animation-delay: 0.2s; }
+.day-card:nth-child(3) { animation-delay: 0.3s; }
+.day-card:nth-child(4) { animation-delay: 0.4s; }
+.day-card:nth-child(5) { animation-delay: 0.5s; }
+
+/* Smooth transitions */
+.segment, .btn, .chip {
+    transition: all 0.3s ease;
+}
